@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AppVendas",
-    "slug": "AppVendas",
+    "name": "LojinhaDaJu",
+    "slug": "LojinhaDaJu",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,14 +19,9 @@
     "ios": {
       "supportsTablet": true
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "androidStatusBar" :{
+      "barStyle": "ligth-content",
+      "backgroundColor": "#000"
     }
   }
 }
