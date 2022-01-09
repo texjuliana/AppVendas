@@ -19,9 +19,8 @@
     "ios": {
       "supportsTablet": true
     },
-    "androidStatusBar" :{
-      "barStyle": "ligth-content",
-      "backgroundColor": "#000"
+    "android": {
+      "package": "com.texjuliana.LojinhaDaJu"
     }
   }
 }
