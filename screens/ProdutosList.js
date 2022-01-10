@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import { View, Text,   FlatList, StyleSheet , SafeAreaView, StatusBar} from 'react-native';
+import { View, Text,   FlatList, StyleSheet } from 'react-native';
 
 import { Product } from '../components/Product.js';
 import { getProdutos } from '../servicos/livros.js';
 
-export function ProdutosList ({navigation, route}) {
+export function ProdutosList ({navigation}) {
 
   function renderProduct({item: product}) {
     return (
@@ -26,10 +26,7 @@ export function ProdutosList ({navigation, route}) {
   });
   
   return (
-   <SafeAreaView style={styles.container}>
-         <StatusBar backgroundColor='#171d31' barStyle="ligth-content" /> 
-    <Text style={styles.title}>Loja da Ju</Text>
-    <Text style={styles.title}>Bem vindo(a) {route.params.input}</Text>
+   
     <FlatList
       style={styles.ProdutosList}
       contentContainerStyle={styles.ProdutosListContainer}
@@ -37,9 +34,7 @@ export function ProdutosList ({navigation, route}) {
       data={Produtos}
       renderItem={renderProduct}
     />
-    </SafeAreaView>
-  
- 
+
   );
 }
 
