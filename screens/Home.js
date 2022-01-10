@@ -8,26 +8,21 @@ const AnimatedBtn = Animatable.createAnimatableComponent(TouchableOpacity);
 const Stack = createNativeStackNavigator();
 
 
-export default function Home({ navigation }) {
-    const [input, setinput] = useState('') ;
-
+export function Home({ navigation }) {
+    const [input, setInput] = useState('') ;
+    
     const [door, setDoor] = useState(false);
-    const [descript, setDescript] = useState('');
-    
-    
     
   function verify(){
-    if (input === '') {alert('Espaço em branco, inserir nome!!'); 
-  }else {
-        return navigation.navigate("Produto", {nomeCli: input })
-    }
+    if (input === '') {alert('Espaço em branco, inserir nome!!');  return;};
 
     setDoor(true);
+
   }
       
 
     return(
-        <SafeAreaView style={styles.container}>
+        <View>
         <StatusBar backgroundColor='#FFB6C1' barStyle='light-content' />
   
        
@@ -48,7 +43,7 @@ export default function Home({ navigation }) {
   
         
   
-  </SafeAreaView>
+  </View>
 
     );
 
